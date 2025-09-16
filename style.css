@@ -18,7 +18,7 @@ body {
     padding: 0 30px;
 }
 
-/* Header Styles */
+/* Header Styles - IMPROVED RESPONSIVE */
 header {
     background: white;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -34,6 +34,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
+    position: relative;
 }
 
 .logo {
@@ -43,9 +44,10 @@ nav {
     font-size: 1.5rem;
     color: #333;
     text-decoration: none;
+    flex-shrink: 0;
 }
 
-/* Styling untuk logo gambar */
+/* Logo image styling */
 .header-img {
     height: 40px;
     width: auto;
@@ -53,10 +55,14 @@ nav {
     object-fit: contain;
 }
 
+/* Navigation Menu - IMPROVED */
 .nav-menu {
     display: flex;
     list-style: none;
     gap: 2rem;
+    flex-grow: 1;
+    justify-content: center;
+    margin: 0 2rem;
 }
 
 .nav-menu a {
@@ -67,6 +73,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    white-space: nowrap;
 }
 
 .nav-menu a:hover {
@@ -107,6 +114,7 @@ nav {
     color: #F57C1F;
 }
 
+/* Sign In Button - ALWAYS RIGHT POSITIONED */
 .sign-in-btn {
     border: 2px solid #F57C1F;
     color: #F57C1F;
@@ -115,6 +123,8 @@ nav {
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s;
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .sign-in-btn:hover {
@@ -131,9 +141,10 @@ nav {
     font-size: 1.5rem;
     color: #333;
     cursor: pointer;
+    flex-shrink: 0;
 }
 
-/* Hero Section - FIXED */
+/* Hero Section - IMPROVED RESPONSIVE */
 .hero {
     background: #f8f9fa;
     padding-top: 120px;
@@ -144,18 +155,17 @@ nav {
     overflow: hidden;
 }
 
-/* Hero Card Styles - FIXED */
+/* Hero Card Styles - IMPROVED */
 .hero-card {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  -webkit-backdrop-filter: blur(10px); /* Safari iOS */
-  backdrop-filter: blur(10px); /* Browser modern */
-  margin: 0 auto;
-  max-width: 1200px;
-  width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
 }
-
 
 .card-content {
     display: grid;
@@ -173,6 +183,7 @@ nav {
 
 .card-logo {
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .card-brand-logo {
@@ -188,8 +199,10 @@ nav {
     color: #333;
     margin: 20px 0;
     font-weight: 400;
+    text-align: center;
 }
 
+/* CTA Button - ALWAYS CENTERED */
 .card-cta-btn {
     background: #ff6b35;
     color: white;
@@ -200,6 +213,8 @@ nav {
     transition: all 0.3s ease;
     display: inline-block;
     width: fit-content;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .card-cta-btn:hover {
@@ -208,7 +223,7 @@ nav {
     box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
 }
 
-/* Fixed Image Container */
+/* Image Container - RESPONSIVE */
 .card-image {
     display: flex;
     justify-content: center;
@@ -350,6 +365,7 @@ nav {
     width: 16px;
 }
 
+/* More Button - CENTERED */
 .more-btn {
     display: block;
     width: 200px;
@@ -627,6 +643,7 @@ nav {
     text-align: center;
 }
 
+/* CTA Button - CENTERED */
 .cta-btn {
     background: #F57C1F;
     color: white;
@@ -639,6 +656,7 @@ nav {
     transition: all 0.3s;
     text-decoration: none;
     display: inline-block;
+    margin: 0 auto;
 }
 
 .cta-btn:hover {
@@ -782,15 +800,40 @@ footer {
     color: #999;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
+/* RESPONSIVE DESIGN - IMPROVED */
+@media (max-width: 1200px) {
     .container {
-        padding: 0 20px;
+        padding: 0 25px;
+    }
+    
+    .nav-menu {
+        gap: 1.5rem;
+        margin: 0 1.5rem;
     }
     
     .card-content {
         padding: 3rem;
         gap: 3rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .nav-menu {
+        gap: 1rem;
+        margin: 0 1rem;
+    }
+    
+    .nav-menu a {
+        font-size: 0.9rem;
+    }
+    
+    .sign-in-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
     }
     
     .cards-grid {
@@ -801,6 +844,12 @@ footer {
 @media (max-width: 768px) {
     .container {
         padding: 0 15px;
+    }
+    
+    /* Mobile Navigation - STACK VERTICALLY */
+    nav {
+        flex-wrap: wrap;
+        gap: 1rem;
     }
     
     .nav-menu {
@@ -814,14 +863,33 @@ footer {
         padding: 1rem;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         border-radius: 0 0 10px 10px;
+        margin: 0;
+        gap: 0.5rem;
     }
 
     .nav-menu.active {
         display: flex;
     }
 
+    .nav-menu a {
+        justify-content: center;
+        padding: 0.5rem;
+    }
+
     .mobile-menu-btn {
         display: block;
+        order: 3;
+    }
+
+    .logo {
+        order: 1;
+        flex: 1;
+    }
+
+    .sign-in-btn {
+        order: 2;
+        margin-left: auto;
+        margin-right: 1rem;
     }
 
     .header-img {
@@ -829,6 +897,7 @@ footer {
         max-width: 150px;
     }
 
+    /* Hero Section Mobile */
     .hero {
         padding-top: 100px;
         min-height: auto;
@@ -849,6 +918,20 @@ footer {
 
     .card-text {
         order: 1;
+    }
+
+    .card-logo {
+        text-align: center;
+    }
+
+    .card-subtitle {
+        text-align: center;
+    }
+
+    .card-cta-btn {
+        margin: 0 auto;
+        display: block;
+        text-align: center;
     }
     
     .section {
@@ -901,6 +984,26 @@ footer {
         padding: 0 10px;
     }
 
+    /* Extra small mobile adjustments */
+    nav {
+        padding: 0.5rem 0;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .header-img {
+        height: 30px;
+        max-width: 120px;
+    }
+
+    .sign-in-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        border-radius: 20px;
+    }
+
     .hero {
         padding-top: 80px;
         padding-bottom: 3rem;
@@ -930,15 +1033,6 @@ footer {
 
     .section-subtitle {
         font-size: 0.95rem;
-    }
-
-    .logo {
-        font-size: 1.2rem;
-    }
-
-    .header-img {
-        height: 30px;
-        max-width: 120px;
     }
 
     .cards-grid {
@@ -972,15 +1066,6 @@ footer {
         text-align: center;
         gap: 2rem;
     }
-
-    nav {
-        padding: 0.8rem 0;
-    }
-    
-    .sign-in-btn {
-        padding: 8px 16px;
-        font-size: 0.9rem;
-    }
     
     .more-btn {
         width: 160px;
@@ -990,6 +1075,45 @@ footer {
     .card-cta-btn, .cta-btn {
         padding: 10px 20px;
         font-size: 0.9rem;
+    }
+}
+
+/* VERY SMALL DEVICES */
+@media (max-width: 360px) {
+    nav {
+        padding: 0.5rem 0;
+    }
+    
+    .logo {
+        font-size: 1rem;
+    }
+    
+    .header-img {
+        height: 25px;
+        max-width: 100px;
+    }
+    
+    .sign-in-btn {
+        padding: 5px 10px;
+        font-size: 0.75rem;
+        margin-right: 0.5rem;
+    }
+    
+    .card-content {
+        padding: 1rem;
+    }
+    
+    .card-brand-logo {
+        height: 120px;
+    }
+    
+    .card-subtitle {
+        font-size: 14px;
+    }
+    
+    .card-cta-btn, .cta-btn {
+        padding: 8px 16px;
+        font-size: 0.8rem;
     }
 }
 
