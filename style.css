@@ -133,36 +133,36 @@ nav {
     cursor: pointer;
 }
 
-/* Hero Section */
+/* Hero Section - FIXED */
 .hero {
     background: #f8f9fa;
-    padding: 120px 0 80px;
-    margin-top: 80px;
+    padding-top: 120px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
     position: relative;
-    overflow: visible;
+    overflow: hidden;
 }
 
-/* Hero Card Styles */
+/* Hero Card Styles - FIXED */
 .hero-card {
-    position: absolute;
-    bottom: -505px;
-    left: 0;
-    right: 0;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-    margin: 0 20px;
-    padding: 85px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(10px); /* Safari iOS */
+  backdrop-filter: blur(10px); /* Browser modern */
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
 }
+
 
 .card-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
-    padding: 50px 0;
+    padding: 4rem;
 }
 
 .card-text {
@@ -178,6 +178,8 @@ nav {
 .card-brand-logo {
     height: 200px;
     width: auto;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 .card-subtitle {
@@ -206,58 +208,34 @@ nav {
     box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
 }
 
+/* Fixed Image Container */
 .card-image {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    min-height: 400px;
 }
 
-.card-house-illustration img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.cta-btn {
-    background: #F57C1F;
-    color: white;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 25px;
-    font-weight: 600;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.cta-btn:hover {
-    background: #e66a0f;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(245, 124, 31, 0.3);
-}
-
-.house-illustration {
+.card-house-illustration {
     width: 100%;
     max-width: 500px;
-    height: 300px;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    height: auto;
     position: relative;
 }
 
-.house-illustration img {
+.card-house-illustration img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease;
+    object-fit: cover;
+    max-height: 400px;
 }
 
-.house-illustration:hover img {
-    transform: scale(1.05);
+.card-house-illustration:hover img {
+    transform: scale(1.02);
 }
 
 /* Section Styles */
@@ -285,7 +263,7 @@ nav {
 /* About Section */
 .about {
     background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-    padding-top: 550px;
+    padding-top: 80px;
 }
 
 .about-content {
@@ -341,7 +319,7 @@ nav {
     z-index: 10;
 }
 
-.card-content {
+.card .card-content {
     padding: 1.5rem;
 }
 
@@ -649,6 +627,26 @@ nav {
     text-align: center;
 }
 
+.cta-btn {
+    background: #F57C1F;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cta-btn:hover {
+    background: #e66a0f;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(245, 124, 31, 0.3);
+}
+
 /* Building Illustration */
 .building-illustration {
     width: 100%;
@@ -790,11 +788,8 @@ footer {
         padding: 0 20px;
     }
     
-    .hero-card {
-        padding: 60px;
-    }
-    
     .card-content {
+        padding: 3rem;
         gap: 3rem;
     }
     
@@ -835,25 +830,25 @@ footer {
     }
 
     .hero {
-        padding: 100px 0 60px;
-        margin-top: 70px;
-    }
-    
-    .hero-card {
-        bottom: -280px;
-        padding: 40px 20px;
-        margin: 0 15px;
+        padding-top: 100px;
+        min-height: auto;
+        padding-bottom: 4rem;
     }
 
     .card-content {
         grid-template-columns: 1fr;
         gap: 2rem;
-        padding: 40px 0;
+        padding: 2rem;
         text-align: center;
     }
-    
-    .about {
-        padding-top: 200px;
+
+    .card-image {
+        order: 2;
+        min-height: 300px;
+    }
+
+    .card-text {
+        order: 1;
     }
     
     .section {
@@ -907,32 +902,26 @@ footer {
     }
 
     .hero {
-        padding: 80px 0 40px;
-        margin-top: 60px;
-    }
-    
-    .hero-card {
-        bottom: -250px;
-        padding: 30px 15px;
-        margin: 0 10px;
+        padding-top: 80px;
+        padding-bottom: 3rem;
     }
     
     .card-content {
-        padding: 30px 0;
+        padding: 1.5rem;
         gap: 1.5rem;
     }
     
     .card-brand-logo {
-        height: 50px;
+        height: 150px;
     }
     
     .card-subtitle {
         font-size: 16px;
         margin: 15px 0;
     }
-    
-    .about {
-        padding-top: 180px;
+
+    .card-image {
+        min-height: 250px;
     }
 
     .section-title {
@@ -964,10 +953,6 @@ footer {
 
     .feature {
         font-size: 0.8rem;
-    }
-
-    .house-illustration {
-        height: 250px;
     }
 
     .building-illustration {
@@ -1008,34 +993,6 @@ footer {
     }
 }
 
-@media (max-width: 360px) {
-    .hero-card {
-        bottom: -220px;
-        padding: 25px 10px;
-    }
-    
-    .card-content {
-        gap: 1rem;
-        padding: 25px 0;
-    }
-    
-    .about {
-        padding-top: 160px;
-    }
-    
-    .section-title {
-        font-size: 1.6rem;
-    }
-    
-    .cards-grid {
-        gap: 0.8rem;
-    }
-    
-    .card-content {
-        padding: 1rem;
-    }
-}
-
 /* Animation and Transitions */
 @keyframes fadeInUp {
     from {
@@ -1071,36 +1028,3 @@ button:focus {
     outline: 2px solid #F57C1F;
     outline-offset: 2px;
 }
-
-/* Loading animation for images */
-.card-image {
-    background: linear-gradient(90deg, #f0f0f0 25%, transparent 50%, #f0f0f0 75%);
-    background-size: 200% 100%;
-}
-
-/* Hover effects for interactive elements */
-.card,
-.cta-btn,
-.more-btn,
-.sign-in-btn {
-    cursor: pointer;
-}
-
-/* Print styles */
-@media print {
-    header {
-        position: static;
-    }
-
-    .hero {
-        margin-top: 0;
-    }
-
-    .cta-btn,
-    .more-btn,
-    .sign-in-btn {
-        border: 1px solid #333;
-        color: #333;
-        background: transparent;
-    }
-}   
