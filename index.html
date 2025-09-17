@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PONDASI - Wujudkan Rumah Impianmu</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
+        
+    
 </head>
 
 <body>
@@ -17,30 +18,29 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <img src="image/header_PONDAsi.png" alt="Logo Pondasi" class="header-img">
+                    <img src="https://via.placeholder.com/200x40/F57C1F/FFFFFF?text=PONDASI" alt="Logo Pondasi" class="header-img">
                 </div>
 
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="#home">Beranda</a></li>
                     <li><a href="#about">Tentang Kami</a></li>
-                    <li class="dropdown">
-                        <a href="#services">Layanan <i class="fas fa-chevron-down"></i></a>
+                    <li class="dropdown" id="dropdown">
+                        <a href="#services" onclick="toggleDropdown(event)">Layanan <i class="fas fa-chevron-down"></i></a>
                         <div class="dropdown-content">
                             <a href="#design">Desain Rumah</a>
                             <a href="#interior">Desain Interior</a>
-                            <a href="#consultation">Konsultasi</a>
+                            <a href="#contact">Konsultasi</a>
                         </div>
                     </li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#design">Portfolio</a></li>
                     <li><a href="#contact">Hubungi Kami</a></li>
                 </ul>
 
                 <a href="#" class="sign-in-btn">Sign In</a>
-
+                
                 <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Toggle Menu">
                     <i class="fas fa-bars" aria-hidden="true"></i>
                 </button>
-
             </nav>
         </div>
     </header>
@@ -50,10 +50,13 @@
         <div class="container">
             <!-- Hero Card -->
             <div class="hero-card">
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-card">
                 <div class="card-content">
                     <div class="card-text">
                         <div class="card-logo">
-                            <img src="image/brand_PONDAsi.png" alt="PONDASi Logo" class="card-brand-logo">
+                            <img src="https://via.placeholder.com/200x200/F57C1F/FFFFFF?text=PONDASI+LOGO" alt="PONDASi Logo" class="card-brand-logo">
                         </div>
                         <p class="card-subtitle">
                             Kami bantu wujudkan rumah impianmu dari nol, secara kolaboratif & profesional.
@@ -68,7 +71,8 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- About Section -->
     <section class="about section" id="about">
@@ -101,50 +105,99 @@
             <div class="cards-grid">
                 <!-- Card 1 -->
                 <div class="card">
-                  <div class="card-image">
-                    <img src="images/green-valley.png" alt="Green Valley" />
-                  </div>
-                  <div class="card-content">
-                    <h3 class="card-title">Green Valley</h3>
-                    <div class="card-features">
-                      <div class="feature"><i class="fas fa-expand-arrows-alt"></i><span>118 m²</span></div>
-                      <div class="feature"><i class="fas fa-bed"></i><span>3</span></div>
-                      <div class="feature"><i class="fas fa-bath"></i><span>4</span></div>
-                      <div class="feature"><i class="fas fa-car"></i><span>2</span></div>
+                    <div class="card-image">
+                        <div class="house-design green-valley">
+                            <div class="design-roof"></div>
+                            <div class="design-walls"></div>
+                            <div class="design-garage"></div>
+                        </div>
+                        <div class="card-badge">6x12</div>
                     </div>
-                  </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Green Valley</h3>
+                        <div class="card-features">
+                            <div class="feature">
+                                <i class="fas fa-expand-arrows-alt"></i>
+                                <span>72m²</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>2</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bath"></i>
+                                <span>1</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-car"></i>
+                                <span>1</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-          
-                <!-- Card 2 -->
+
                 <div class="card">
-                  <div class="card-image">
-                    <img src="images/silk-route.png" alt="Silk Route" />
-                  </div>
-                  <div class="card-content">
-                    <h3 class="card-title">Silk Route</h3>
-                    <div class="card-features">
-                      <div class="feature"><i class="fas fa-expand-arrows-alt"></i><span>98 m²</span></div>
-                      <div class="feature"><i class="fas fa-bed"></i><span>2</span></div>
-                      <div class="feature"><i class="fas fa-bath"></i><span>2</span></div>
-                      <div class="feature"><i class="fas fa-car"></i><span>1</span></div>
+                    <div class="card-image">
+                        <div class="house-design silk-route">
+                            <div class="design-roof"></div>
+                            <div class="design-walls"></div>
+                            <div class="design-window"></div>
+                        </div>
+                        <div class="card-badge">9x9</div>
                     </div>
-                  </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Silk Route</h3>
+                        <div class="card-features">
+                            <div class="feature">
+                                <i class="fas fa-expand-arrows-alt"></i>
+                                <span>81m²</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>3</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bath"></i>
+                                <span>2</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-car"></i>
+                                <span>1</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-          
-                <!-- Card 3 -->
+
                 <div class="card">
-                  <div class="card-image">
-                    <img src="images/nature-sanctuary.png" alt="Nature Sanctuary" />
-                  </div>
-                  <div class="card-content">
-                    <h3 class="card-title">Nature Sanctuary</h3>
-                    <div class="card-features">
-                      <div class="feature"><i class="fas fa-expand-arrows-alt"></i><span>244 m²</span></div>
-                      <div class="feature"><i class="fas fa-bed"></i><span>1</span></div>
-                      <div class="feature"><i class="fas fa-bath"></i><span>4</span></div>
-                      <div class="feature"><i class="fas fa-car"></i><span>2</span></div>
+                    <div class="card-image">
+                        <div class="house-design nature-sanctuary">
+                            <div class="design-roof"></div>
+                            <div class="design-walls"></div>
+                            <div class="design-balcony"></div>
+                        </div>
+                        <div class="card-badge">7x15</div>
                     </div>
-                  </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Nature Sanctuary</h3>
+                        <div class="card-features">
+                            <div class="feature">
+                                <i class="fas fa-expand-arrows-alt"></i>
+                                <span>105m²</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>3</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bath"></i>
+                                <span>2</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-car"></i>
+                                <span>2</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
               </div>
 
@@ -161,50 +214,109 @@
             <div class="cards-grid">
                 <!-- Card 1 -->
                 <div class="card">
-                  <div class="card-image">
-                    <img src="images/cemerlang.png" alt="Tipe Cemerlang">
-                  </div>
-                  <div class="card-content">
-                    <h3 class="card-title">Tipe Cemerlang</h3>
-                    <div class="card-features">
-                      <div class="feature"><i class="fas fa-expand-arrows-alt"></i> <span>36m²</span></div>
-                      <div class="feature"><i class="fas fa-bed"></i> <span>2</span></div>
-                      <div class="feature"><i class="fas fa-bath"></i> <span>1</span></div>
-                      <div class="feature"><i class="fas fa-couch"></i> <span>1</span></div>
+                    <div class="card-image">
+                        <div class="interior-design cemerlang">
+                            <div class="floor-plan">
+                                <div class="room bedroom"></div>
+                                <div class="room living-room"></div>
+                                <div class="room kitchen"></div>
+                                <div class="room bathroom"></div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Tipe Cemerlang</h3>
+                        <div class="card-features">
+                            <div class="feature">
+                                <i class="fas fa-expand-arrows-alt"></i>
+                                <span>36m²</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>2</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bath"></i>
+                                <span>1</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-couch"></i>
+                                <span>1</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-          
-                <!-- Card 2 -->
+
                 <div class="card">
-                  <div class="card-image">
-                    <img src="images/terang.png" alt="Tipe Terang">
-                  </div>
-                  <div class="card-content">
-                    <h3 class="card-title">Tipe Terang</h3>
-                    <div class="card-features">
-                      <div class="feature"><i class="fas fa-expand-arrows-alt"></i> <span>54m²</span></div>
-                      <div class="feature"><i class="fas fa-bed"></i> <span>2</span></div>
-                      <div class="feature"><i class="fas fa-bath"></i> <span>2</span></div>
-                      <div class="feature"><i class="fas fa-couch"></i> <span>1</span></div>
+                    <div class="card-image">
+                        <div class="interior-design terang">
+                            <div class="floor-plan">
+                                <div class="room bedroom-main"></div>
+                                <div class="room bedroom-2"></div>
+                                <div class="room living-area"></div>
+                                <div class="room bathroom-1"></div>
+                                <div class="room bathroom-2"></div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Tipe Terang</h3>
+                        <div class="card-features">
+                            <div class="feature">
+                                <i class="fas fa-expand-arrows-alt"></i>
+                                <span>54m²</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>2</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bath"></i>
+                                <span>2</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-couch"></i>
+                                <span>1</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-          
-                <!-- Card 3 -->
+
                 <div class="card">
-                  <div class="card-image">
-                    <img src="images/aloka.png" alt="Tipe Aloka">
-                  </div>
-                  <div class="card-content">
-                    <h3 class="card-title">Tipe Aloka</h3>
-                    <div class="card-features">
-                      <div class="feature"><i class="fas fa-expand-arrows-alt"></i> <span>72m²</span></div>
-                      <div class="feature"><i class="fas fa-bed"></i> <span>3</span></div>
-                      <div class="feature"><i class="fas fa-bath"></i> <span>2</span></div>
-                      <div class="feature"><i class="fas fa-couch"></i> <span>2</span></div>
+                    <div class="card-image">
+                        <div class="interior-design aloka">
+                            <div class="floor-plan">
+                                <div class="room master-bedroom"></div>
+                                <div class="room bedroom-child"></div>
+                                <div class="room guest-room"></div>
+                                <div class="room living-space"></div>
+                                <div class="room dining-area"></div>
+                                <div class="room bath-main"></div>
+                                <div class="room bath-guest"></div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Tipe Aloka</h3>
+                        <div class="card-features">
+                            <div class="feature">
+                                <i class="fas fa-expand-arrows-alt"></i>
+                                <span>72m²</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>3</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bath"></i>
+                                <span>2</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-couch"></i>
+                                <span>2</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
               </div>
 
@@ -223,8 +335,31 @@
                         <a href="#contact" class="cta-btn">Hubungi Kami</a>
                     </div>
                     <div class="cta-image">
-                        <div class="image-box">
-                            <img src="8f4653ca-7375-4744-beaa-7af9c3d9b80d.png" alt="Interior Banner">
+                        <div class="building-illustration">
+                            <div class="building-base"></div>
+                            <div class="building-floors">
+                                <div class="floor"></div>
+                                <div class="floor"></div>
+                                <div class="floor"></div>
+                                <div class="floor"></div>
+                            </div>
+                            <div class="building-windows">
+                                <div class="window-row">
+                                    <div class="window"></div>
+                                    <div class="window"></div>
+                                    <div class="window"></div>
+                                </div>
+                                <div class="window-row">
+                                    <div class="window"></div>
+                                    <div class="window"></div>
+                                    <div class="window"></div>
+                                </div>
+                                <div class="window-row">
+                                    <div class="window"></div>
+                                    <div class="window"></div>
+                                    <div class="window"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -244,19 +379,13 @@
                         </div>
                         PONDASI
                     </div>
-                    <p>Kami bantu untuk mewujudkan rumah impianmu, dengan visi, kolaborasi dan kualitas terbaik. Contact
-                        ke kami untuk konsultasi gratis!</p>
+                    <p>Kami bantu untuk mewujudkan rumah impianmu, dengan visi, kolaborasi dan kualitas terbaik. Contact ke kami untuk konsultasi gratis!</p>
                     <div class="social-links">
-                        <a href="#" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"
-                                aria-hidden="true"></i></a>
-                        <a href="#" aria-label="Twitter" title="Twitter"><i class="fab fa-twitter"
-                                aria-hidden="true"></i></a>
-                        <a href="#" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"
-                                aria-hidden="true"></i></a>
-                        <a href="#" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"
-                                aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Twitter" title="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
                     </div>
-
                 </div>
 
                 <div class="footer-section">
@@ -283,7 +412,7 @@
                     <h4>Kontak</h4>
                     <p><i class="fas fa-envelope"></i> pondasi677@gmail.com</p>
                     <p><i class="fas fa-phone"></i> +62 812-3456-7890</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Purwokerto,Indonesia</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</p>
                 </div>
             </div>
 
@@ -295,14 +424,87 @@
 
     <!-- JavaScript -->
     <script>
+        // Function untuk set active navbar berdasarkan section yang terlihat
+        function setActiveNavbar() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
+            
+            let currentSection = '';
+            const scrollPosition = window.scrollY + 100;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            // Remove active class dari semua links
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Add active class ke link yang sesuai
+            if (currentSection) {
+                const activeLink = document.querySelector(`.nav-menu a[href="#${currentSection}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
+            } else {
+                // Default ke Beranda jika di top page
+                const homeLink = document.querySelector('.nav-menu a[href="#home"]');
+                if (homeLink && window.scrollY < 200) {
+                    homeLink.classList.add('active');
+                }
+            }
+        }
+
+        // Set active navbar saat page load
+        document.addEventListener('DOMContentLoaded', function() {
+            setActiveNavbar();
+            
+            // Set Beranda sebagai active default
+            const homeLink = document.querySelector('.nav-menu a[href="#home"]');
+            if (homeLink) {
+                homeLink.classList.add('active');
+            }
+        });
+
+        // Update active navbar saat scroll
+        window.addEventListener('scroll', setActiveNavbar);
+
         function toggleMenu() {
             const navMenu = document.getElementById('navMenu');
+            const menuBtn = document.querySelector('.mobile-menu-btn i');
+            
             navMenu.classList.toggle('active');
+            
+            // Change icon
+            if (navMenu.classList.contains('active')) {
+                menuBtn.classList.remove('fa-bars');
+                menuBtn.classList.add('fa-times');
+            } else {
+                menuBtn.classList.remove('fa-times');
+                menuBtn.classList.add('fa-bars');
+            }
+        }
+
+        function toggleDropdown(event) {
+            event.preventDefault();
+            const dropdown = document.getElementById('dropdown');
+            dropdown.classList.toggle('active');
         }
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
+                // Don't prevent default for dropdown toggle
+                if (this.onclick && this.onclick.toString().includes('toggleDropdown')) {
+                    return;
+                }
+                
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
@@ -310,6 +512,20 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
+                    
+                    // Close mobile menu after clicking a link
+                    const navMenu = document.getElementById('navMenu');
+                    const menuBtn = document.querySelector('.mobile-menu-btn i');
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        menuBtn.classList.remove('fa-times');
+                        menuBtn.classList.add('fa-bars');
+                    }
+
+                    // Manually set active state untuk immediate feedback
+                    const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    this.classList.add('active');
                 }
             });
         });
@@ -318,9 +534,18 @@
         document.addEventListener('click', function (event) {
             const navMenu = document.getElementById('navMenu');
             const menuBtn = document.querySelector('.mobile-menu-btn');
+            const dropdown = document.getElementById('dropdown');
 
+            // Close mobile menu if clicking outside
             if (!navMenu.contains(event.target) && !menuBtn.contains(event.target)) {
                 navMenu.classList.remove('active');
+                document.querySelector('.mobile-menu-btn i').classList.remove('fa-times');
+                document.querySelector('.mobile-menu-btn i').classList.add('fa-bars');
+            }
+
+            // Close dropdown if clicking outside
+            if (!dropdown.contains(event.target)) {
+                dropdown.classList.remove('active');
             }
         });
 
@@ -337,5 +562,4 @@
         });
     </script>
 </body>
-
 </html>
